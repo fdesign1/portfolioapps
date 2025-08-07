@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
+    "dev": "vite",
     "build": "vite build",
     "build:server": "vite build && tsc --project tsconfig.server.json",
     "start": "tsx watch scripts/dev.ts"

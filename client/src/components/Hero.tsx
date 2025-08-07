@@ -16,10 +16,10 @@ export function Hero() {
         <div className="max-w-3xl mx-auto">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-foreground mb-6">
             Hi, I'm{' '}
-            <span className="text-primary">John Doe</span>
+            <span className="text-primary">Matias Ferreras</span>
           </h1>
           <p className="text-xl sm:text-2xl text-muted-foreground mb-8">
-            Full Stack Developer & UI/UX Designer
+            IT support engineer and web developer enthusiast
           </p>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
             I create beautiful, functional, and user-centered digital experiences.
@@ -27,7 +27,7 @@ export function Hero() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button onClick={scrollToProjects} size="lg" className="min-w-40">
-              View My Work
+              View My Projects
             </Button>
             <Button
               variant="outline"

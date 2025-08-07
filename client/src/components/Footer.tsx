@@ -53,10 +53,10 @@ export function Footer() {
           
           <div className="border-t border-border/40 pt-8">
             <p className="text-muted-foreground text-sm">
-              © {currentYear} John Doe. All rights reserved.
+              © {currentYear} Matias Ferreras. All rights reserved.
             </p>
             <p className="text-muted-foreground text-xs mt-2">
-              Built with React, TypeScript, and Tailwind CSS
+              Built with passion in Wrocław, Poland.
             </p>
           </div>
         </div>

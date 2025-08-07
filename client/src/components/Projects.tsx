@@ -11,7 +11,7 @@ export function Projects() {
             Featured Projects
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Here are some of my recent projects that showcase my skills and passion for development.
+            Here are some of my recent projects that showcase my skills and passion in IT.
           </p>
         </div>
         
