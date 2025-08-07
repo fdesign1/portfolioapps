@@ -1,0 +1,9 @@
+# Carpetas a ignorar
+node_modules/
+dist/
+.git/
+.DS_Store
+
+# Archivos del servidor si no se usan
+server/
+tsconfig.server.json
