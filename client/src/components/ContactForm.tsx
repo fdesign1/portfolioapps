@@ -175,21 +175,21 @@ export function ContactForm() {
                 <Mail className="h-5 w-5 text-primary" />
                 <div>
                   <p className="font-medium">Email</p>
-                  <p className="text-sm text-muted-foreground">john.doe@example.com</p>
+                  <p className="text-sm text-muted-foreground">ferrerasmatias@outlook.com</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-primary" />
                 <div>
                   <p className="font-medium">Phone</p>
-                  <p className="text-sm text-muted-foreground">+1 (555) 123-4567</p>
+                  <p className="text-sm text-muted-foreground">+48515465342</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="h-5 w-5 text-primary" />
                 <div>
                   <p className="font-medium">Location</p>
-                  <p className="text-sm text-muted-foreground">New York, NY</p>
+                  <p className="text-sm text-muted-foreground">Wroclaw, PL</p>
                 </div>
               </div>
             </div>
@@ -200,7 +200,7 @@ export function ContactForm() {
           <CardHeader>
             <CardTitle className="text-xl">Let's Work Together</CardTitle>
             <CardDescription>
-              I'm available for freelance projects and full-time opportunities.
+              I'm available for full-time opportunities.
             </CardDescription>
           </CardHeader>
           <CardContent>

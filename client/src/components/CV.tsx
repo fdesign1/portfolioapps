@@ -6,14 +6,14 @@ import { Download, Eye } from 'lucide-react';
 export function CV() {
   const handleViewCV = () => {
     // Replace with actual CV URL
-    window.open('/assets/cv.pdf', '_blank');
+    window.open('https://maticv-m.netlify.app/', '_blank');
   };
 
   const handleDownloadCV = () => {
     // Replace with actual CV download URL
     const link = document.createElement('a');
-    link.href = '/assets/cv.pdf';
-    link.download = 'John_Doe_CV.pdf';
+    link.href = '/img/Mati_CV.pdf';
+    link.download = 'Mati_CV.pdf';
     link.click();
   };
 
@@ -34,15 +34,15 @@ export function CV() {
             <Card className="h-full">
               <CardHeader>
                 <CardTitle className="text-2xl">Professional Summary</CardTitle>
-                <CardDescription>5+ years of experience in full-stack development</CardDescription>
+                <CardDescription>5+ years of experience customer support engineering</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div>
                   <h4 className="font-semibold mb-2">Skills & Expertise</h4>
                   <ul className="list-disc list-inside text-muted-foreground space-y-1">
-                    <li>Frontend: React, Vue.js, TypeScript, Tailwind CSS</li>
-                    <li>Backend: Node.js, Express, Python, Django</li>
-                    <li>Database: MongoDB, PostgreSQL, MySQL</li>
+                    <li>Frontend: React, JS, TypeScript, Boostrap</li>
+                    <li>Backend: Node.js, Express, API</li>
+                    <li>Database: PostgreSQL, MySQL</li>
                     <li>Cloud: AWS, Google Cloud, Docker</li>
                   </ul>
                 </div>
@@ -50,12 +50,12 @@ export function CV() {
                   <h4 className="font-semibold mb-2">Recent Experience</h4>
                   <div className="space-y-2">
                     <div>
-                      <p className="font-medium">Senior Full Stack Developer</p>
-                      <p className="text-sm text-muted-foreground">Tech Company Inc. • 2022 - Present</p>
+                      <p className="font-medium">IT support engineer</p>
+                      <p className="text-sm text-muted-foreground">Smartbear -  to Date</p>
                     </div>
                     <div>
-                      <p className="font-medium">Frontend Developer</p>
-                      <p className="text-sm text-muted-foreground">Digital Agency • 2020 - 2022</p>
+                      <p className="font-medium">Data Analyst</p>
+                      <p className="text-sm text-muted-foreground">Capgemini • 2021 - 2024</p>
                     </div>
                   </div>
                 </div>
@@ -67,6 +67,11 @@ export function CV() {
                 <div className="w-48 h-64 mx-auto bg-secondary/20 rounded-lg flex items-center justify-center border-2 border-dashed border-secondary/40">
                   <div className="text-center">
                     <div className="w-16 h-20 bg-primary/20 rounded mx-auto mb-2"></div>
+                      <img
+    src="/img/cvpreview.png" // Cambia esta ruta por la de tu imagen
+    alt="CV Preview"
+    className="w-full h-full object-cover rounded"
+  />
                     <p className="text-sm text-muted-foreground">CV Preview</p>
                   </div>
                 </div>

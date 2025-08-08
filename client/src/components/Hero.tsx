@@ -22,8 +22,7 @@ export function Hero() {
             IT support engineer and web developer enthusiast
           </p>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            I create beautiful, functional, and user-centered digital experiences.
-            Passionate about clean code and innovative solutions.
+            Passionate about AI, problem-solving, and continuously expanding my skills in web application development.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button onClick={scrollToProjects} size="lg" className="min-w-40">
