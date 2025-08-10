@@ -81,7 +81,7 @@
 
 ## 🆘 **Troubleshooting:**
 
-- **"EmailJS configuration is missing"**: Check your `.env.local` file
+- **"EmailJS configuration is missing"**: Check your `.env` file
 - **"Failed to send email"**: Verify your EmailJS credentials
 - **Build errors**: Make sure all environment variables are set in Netlify
 
