@@ -64,16 +64,16 @@ export function CV() {
 
             <div className="space-y-6">
               <div className="text-center">
-                <div className="w-48 h-64 mx-auto bg-secondary/20 rounded-lg flex items-center justify-center border-2 border-dashed border-secondary/40">
-                  <div className="text-center">
-                    <div className="w-16 h-20 bg-primary/20 rounded mx-auto mb-2"></div>
-                      <img
-    src="/img/cvpreview.png" // Cambia esta ruta por la de tu imagen
-    alt="CV Preview"
-    className="w-full h-full object-cover rounded"
-  />
-                    <p className="text-sm text-muted-foreground">CV Preview</p>
+                <div className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto">
+                  <div className="relative aspect-[3/4] bg-secondary/20 rounded-lg overflow-hidden border-2 border-dashed border-secondary/40">
+                    <img
+                      src="/img/cvpreview.png"
+                      alt="CV Preview"
+                      className="w-full h-full object-cover object-center rounded"
+                      loading="lazy"
+                    />
                   </div>
+                  <p className="text-sm text-muted-foreground mt-2">CV Preview</p>
                 </div>
               </div>
 
