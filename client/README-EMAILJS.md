@@ -33,7 +33,7 @@
 ## ⚙️ **Step 5: Configure Environment Variables**
 
 1. **For Local Development:**
-   - Edit `client/.env.local`
+   - Edit `client/.env`
    - Replace the placeholder values:
    ```env
    VITE_EMAILJS_SERVICE_ID=service_abc123
@@ -64,7 +64,7 @@
 - ✅ Environment variables configured
 - ✅ TypeScript types added
 - ✅ Error handling implemented
-- ✅ `.env.local` added to `.gitignore`
+- ✅ `.env` added to `.gitignore`
 
 ## 🧪 **Testing:**
 
