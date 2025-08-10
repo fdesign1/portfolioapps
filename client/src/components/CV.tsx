@@ -41,7 +41,7 @@ export function CV() {
                   <h4 className="font-semibold mb-2">Skills & Expertise</h4>
                   <ul className="list-disc list-inside text-muted-foreground space-y-1">
                     <li>Frontend: React, JS, TypeScript, Boostrap</li>
-                    <li>Backend: Node.js, Express, API</li>
+                    <li>Backend: Node.js, Express, APIs</li>
                     <li>Database: PostgreSQL, MySQL</li>
                     <li>Cloud: AWS, Google Cloud, Docker</li>
                   </ul>

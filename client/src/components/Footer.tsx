@@ -56,7 +56,7 @@ export function Footer() {
               © {currentYear} Matias Ferreras. All rights reserved.
             </p>
             <p className="text-muted-foreground text-xs mt-2">
-              Built with passion in Wrocław, Poland.
+              Built in Wrocław, Poland.
             </p>
           </div>
         </div>

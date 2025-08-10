@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Mail, MapPin, Phone } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 interface FormData {
   name: string;
@@ -26,6 +27,7 @@ export function ContactForm() {
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState<string>('');
 
   const validateForm = (): boolean => {
     const newErrors: FormErrors = {};
@@ -58,14 +60,41 @@ export function ContactForm() {
     }
 
     setIsSubmitting(true);
+    setSubmitError('');
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    try {
+      // Check if environment variables are configured
+      if (!import.meta.env.VITE_EMAILJS_SERVICE_ID || 
+          !import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 
+          !import.meta.env.VITE_EMAILJS_PUBLIC_KEY) {
+        throw new Error('EmailJS configuration is missing. Please check your environment variables.');
+      }
 
-    console.log('Form submitted:', formData);
-    setSubmitted(true);
-    setIsSubmitting(false);
-    setFormData({ name: '', email: '', message: '' });
+      // EmailJS configuration
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+        to_email: 'ferrerasmatias@outlook.com', // Your email address
+      };
+
+      // Send email using EmailJS
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        templateParams,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
+
+      console.log('Email sent successfully!');
+      setSubmitted(true);
+      setFormData({ name: '', email: '', message: '' });
+    } catch (error) {
+      console.error('Failed to send email:', error);
+      setSubmitError('Failed to send message. Please try again or contact me directly.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -75,6 +104,11 @@ export function ContactForm() {
     // Clear error when user starts typing
     if (errors[name as keyof FormErrors]) {
       setErrors(prev => ({ ...prev, [name]: undefined }));
+    }
+    
+    // Clear submit error when user starts typing
+    if (submitError) {
+      setSubmitError('');
     }
   };
 
@@ -148,7 +182,7 @@ export function ContactForm() {
                 id="message"
                 name="message"
                 rows={4}
-                placeholder="Tell me about your project..."
+                placeholder="Tell me about your company..."
                 value={formData.message}
                 onChange={handleInputChange}
                 className={`flex min-h-[80px] w-full rounded-md border border-input bg-transparent px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 ${
@@ -159,6 +193,12 @@ export function ContactForm() {
                 <p className="text-sm text-red-500">{errors.message}</p>
               )}
             </div>
+
+            {submitError && (
+              <div className="p-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-md">
+                <p className="text-sm text-red-600 dark:text-red-400">{submitError}</p>
+              </div>
+            )}
 
             <Button type="submit" className="w-full" disabled={isSubmitting}>
               {isSubmitting ? 'Sending...' : 'Send Message'}
@@ -198,7 +238,7 @@ export function ContactForm() {
 
         <Card>
           <CardHeader>
-            <CardTitle className="text-xl">Let's Work Together</CardTitle>
+            <CardTitle className="text-xl">Let's keep in touch</CardTitle>
             <CardDescription>
               I'm available for full-time opportunities.
             </CardDescription>

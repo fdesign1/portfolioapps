@@ -11,8 +11,7 @@ export function HireMe() {
               Let's Work Together
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              I'm always interested in new opportunities and exciting projects. 
-              Let's discuss how we can bring your ideas to life.
+              I'm always interested in new opportunities and interesting projects.
             </p>
           </div>
           
