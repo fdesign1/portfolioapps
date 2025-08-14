@@ -75,7 +75,7 @@ export function ContactForm() {
         from_name: formData.name,
         from_email: formData.email,
         message: formData.message,
-        to_email: 'ferrerasmatias@outlook.com', // Your email address
+        to_email: 'matiasferreras33@gmail.com', // Your email address
       };
 
       // Send email using EmailJS
