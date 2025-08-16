@@ -1,6 +1,6 @@
-import React from 'react';
-import { ProjectCard } from './ProjectCard';
-import { projects } from '@/data/projects';
+import React from "react";
+import { ProjectCard } from "./ProjectCard";
+import { projects } from "@/data/projects";
 
 export function Projects() {
   return (
@@ -10,11 +10,9 @@ export function Projects() {
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
             Featured Projects
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Here are some of my recent projects that showcase my skills and passion in IT.
-          </p>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto"></p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
             <ProjectCard key={project.id} project={project} />
